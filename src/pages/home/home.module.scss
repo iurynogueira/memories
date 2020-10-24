@@ -1,0 +1,60 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  h1 {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    color: #fff;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+  padding: 32px 0;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 4px 18px rgba(171, 171, 171, 0.08);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  // height: 100px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  min-width: 235px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialised;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #083D93;
+  }
+}
+
+
+
+// ======= Gradient do footer =========
+// background: linear-gradient(to right, #A0238C 16.6%, #46A0AA 16.6% 33.2%, #F56E28 33.2% 48.8%, #8CC83C 48.8% 66.4%, #0096D7 66.4% 83%, #EB195A 83%);
