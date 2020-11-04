@@ -1,10 +1,13 @@
 .card {
     border-radius: 5px;
     background: #fff;
-    padding: 22px;
+    padding: 14px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    transition: transform .2s;
+    
 
     .value {
         font-size: 20px;
@@ -13,4 +16,21 @@
     .key {
         font-size: 16px;
     }
+}
+
+.card:hover{
+    transform: scale(1.02);
+    background: #44a4dc;
+    color: #fff;
+}
+
+.action_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.copy_action {
+    cursor: pointer;
 }

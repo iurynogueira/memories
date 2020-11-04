@@ -20,3 +20,15 @@ export const getMemories = async (): Promise<Memorie[] | undefined> => {
     throw error;
   }
 };
+
+export const removeMemorie = async (memoryId: number): Promise<Memorie[] | undefined> => {
+  try {
+    const response = await api.delete('/memories/' + memoryId);
+    if (response && response.data) {
+      return response.data.data;
+    }
+  } catch (error) {
+    handleError(error);
+    throw error;
+  }
+};

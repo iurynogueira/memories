@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { Redirect, Route, RouteProps, useHistory } from 'react-router-dom';
+import { Redirect, Route, RouteProps } from 'react-router-dom';
 import { handleError } from 'services/error-handler';
 import api from '../services/api';
 

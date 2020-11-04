@@ -54,6 +54,23 @@
   }
 }
 
+.add_btn {
+  padding: 10px;
+  background-color: #43a4dc;
+  display: inline-block;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add_btn:hover {
+  background-color: #398ab9;
+}
+
+.container_actions {
+  display: flex;
+  justify-content: flex-end;
+}
 
 
 // ======= Gradient do footer =========

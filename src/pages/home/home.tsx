@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from 'context/auth';
 import styles from './home.module.scss';
-import { Link } from 'react-router-dom';
 import MemorieCard, { MemorieCardProps } from 'components/MemorieCard/memorie-card';
 import { getMemories } from 'services/memories';
 
@@ -30,6 +29,12 @@ const Home = () => {
     <>
       <div className={styles.welcome}>
         <h1>Hello {user?.username}!</h1>
+      </div>
+
+      <div className={styles.container_actions}>
+        <div className={styles.add_btn}>
+          <span>New Memorie</span>
+        </div>
       </div>
 
       <div className={styles.grid}>

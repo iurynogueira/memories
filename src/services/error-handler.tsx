@@ -4,7 +4,7 @@ import { toast, ToastOptions } from 'react-toastify';
 
 const toastConfig: ToastOptions = {
   position: 'top-right',
-  type: 'error',
+  type: 'error'
 };
 
 const errorContent = (message: string) => (
@@ -19,12 +19,12 @@ export const handleError = (error: AxiosError) => {
   const { response } = error;
   if (response && response.data) {
     const { message } = response.data;
-    console.log(message)
+    console.log(response)
 
     if (message && typeof message === 'string' && message.length) {
       toast(errorContent(message), toastConfig);
     } else {
-      toast('Tivemos um probleminha', toastConfig);
+      toast(response.data.error_message || 'Tivemos um probleminha', toastConfig);
     }
   } else {
     toast('erro', toastConfig);
