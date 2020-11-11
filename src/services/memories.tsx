@@ -1,7 +1,7 @@
 import api from './api';
 import { handleError } from './error-handler';
 
-interface Memorie {
+interface Memory {
     id: number;
     user_id: number;
     key: string;
@@ -9,7 +9,7 @@ interface Memorie {
     visibility: boolean;
 };
 
-export const getMemories = async (): Promise<Memorie[] | undefined> => {
+export const getMemories = async (): Promise<Memory[] | undefined> => {
   try {
     const response = await api.get('/memories');
     if (response && response.data) {
@@ -21,7 +21,7 @@ export const getMemories = async (): Promise<Memorie[] | undefined> => {
   }
 };
 
-export const removeMemorie = async (memoryId: number): Promise<Memorie[] | undefined> => {
+export const removeMemory = async (memoryId: number): Promise<Memory[] | undefined> => {
   try {
     const response = await api.delete('/memories/' + memoryId);
     if (response && response.data) {

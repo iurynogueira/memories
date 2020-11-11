@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { toast, ToastOptions } from 'react-toastify';
-import { removeMemorie } from 'services/memories';
+import { removeMemory } from 'services/memories';
 
 
-export interface MemorieCardProps {
+export interface MemoryCardProps {
     id: number;
     user_id: number;
     key: string;
@@ -18,7 +18,7 @@ const toastConfigSuccess: ToastOptions = {
   autoClose: 2000
 };
 
-const MemorieCard: React.FC<MemorieCardProps> = (props) => {
+const MemoryCard: React.FC<MemoryCardProps> = (props) => {
 
   function copy(textToCopy: string) {
     const el = document.createElement('textarea');
@@ -32,7 +32,7 @@ const MemorieCard: React.FC<MemorieCardProps> = (props) => {
   }
 
   function remove(memoryId: number) {
-    removeMemorie(memoryId)
+    removeMemory(memoryId)
       .then(
         response => {
           toast('Forgotten memory!', toastConfigSuccess);
@@ -53,4 +53,4 @@ const MemorieCard: React.FC<MemorieCardProps> = (props) => {
   );
 };
 
-export default MemorieCard;
+export default MemoryCard;
