@@ -7,7 +7,7 @@ const api = Axios.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('user') || '')
+    'Authorization': 'Bearer ' + JSON.parse((localStorage.getItem('user') || '{}'))
   },
 });
 
