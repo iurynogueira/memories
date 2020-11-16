@@ -12,6 +12,7 @@ blocks:
           commands:
             - checkout
             - yarn install
+            - cache
     dependencies: []
   - name: Install Cypress
     dependencies:
