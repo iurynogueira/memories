@@ -5,10 +5,10 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: lint
+  - name: Yarn Install
     task:
       jobs:
-        - name: lint project
+        - name: install
           commands:
-            - '- checkout'
-            - '- yarn lint'
+            - checkout
+            - yarn install
