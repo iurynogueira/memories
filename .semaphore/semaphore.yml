@@ -12,3 +12,12 @@ blocks:
           commands:
             - checkout
             - yarn install
+    dependencies: []
+  - name: Build
+    dependencies:
+      - Yarn Install
+    task:
+      jobs:
+        - name: build project
+          commands:
+            - yarn build
