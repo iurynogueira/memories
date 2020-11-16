@@ -21,13 +21,5 @@ blocks:
         - name: Cypress install
           commands:
             - checkout
-            - npm i -g cypress
-  - name: test e2e
-    dependencies:
-      - Install Cypress
-    task:
-      jobs:
-        - name: run test e2e
-          commands:
-            - checkout
+            - npm install -g cypress
             - cypress run
