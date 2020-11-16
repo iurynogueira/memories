@@ -5,9 +5,10 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: 'Checkout #1'
+  - name: lint
     task:
       jobs:
-        - name: Checkout
+        - name: lint project
           commands:
-            - checkout
+            - '- checkout'
+            - '- yarn lint'
