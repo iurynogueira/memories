@@ -21,5 +21,4 @@ blocks:
         - name: Cypress install
           commands:
             - checkout
-            - npm install -g cypress
-            - cypress run
+            - yarn run cypress run
