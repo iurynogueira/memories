@@ -13,11 +13,12 @@ blocks:
             - checkout
             - yarn install
     dependencies: []
-  - name: Run e2e
+  - name: Install Cypress and Run e2e
     dependencies:
       - Yarn Install
     task:
       jobs:
-        - name: test e2e
+        - name: Cypress install
           commands:
-            - cypress run
+            - checkout
+            - npm i -g cypress
