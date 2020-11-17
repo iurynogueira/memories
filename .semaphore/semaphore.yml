@@ -14,12 +14,3 @@ blocks:
             - yarn install
             - cache
     dependencies: []
-  - name: Install Cypress
-    dependencies:
-      - Yarn Install
-    task:
-      jobs:
-        - name: Cypress install
-          commands:
-            - checkout
-            - yarn run cypress run
