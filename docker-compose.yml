@@ -1,10 +1,13 @@
-version: '3.7'
+version: '3'
 services:
 
-app-prod:
-    container_name: dockerized-react-app
-    build:
-      context: .
-      dockerfile: Dockerfile-prod
-    ports:
-      - '8080:80'
+  memory_e2e:
+    image: cypress/included:3.2.0
+    container_name: memory_e2e
+    working_dir: /e2e
+    volumes:
+      - ./e2e/cypress:/e2e
+    network_mode: host
+    entrypoint: ''
+    command: sh
+    tty: true
